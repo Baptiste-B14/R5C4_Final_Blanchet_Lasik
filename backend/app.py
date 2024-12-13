@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
-from task_controller import task_bp
-from statistics_controller import stat_bp
+from controller import searches_bp
+
 
 app = Flask(__name__)
 
@@ -10,8 +10,8 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]}})
 
 # votre fichier app ne devrait pas contenir de routes, seulement les imports et l'instanciation de l'application...
-app.register_blueprint(task_bp)
-app.register_blueprint(stat_bp)
+app.register_blueprint(searches_bp)
+
 
 # ...à l'exception d'un hello world éventuellement
 @app.get('/')
@@ -34,4 +34,5 @@ app = Flask(__name__)
 def hello():
     return jsonify({"message": 'Hello, World!'}), 200
 '''
+
 
