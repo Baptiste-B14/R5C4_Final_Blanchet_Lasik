@@ -1,6 +1,5 @@
 
 from flask import Blueprint, request
-from flask_expects_json import expects_json # Vous n'en aurez pas besoin pour l'examen, gardez toutefois à l'esprit qu'il faut valider les données reçues
 from datetime import datetime
 import json
 
