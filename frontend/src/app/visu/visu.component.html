@@ -1,10 +1,23 @@
-<h2>Liste des utilisateurs</h2>
-
-<ul>
-  @for (search of searches; track $index) {
+<div>
+  <ul>
+    @for (search of paginatedSearches; track $index) {
     <li>
-      <p>Utilisateur n°{{ search }}</p>
+      {{ search.id }} - {{ search.algorithm }} - {{ search.grid_width }} - {{ search.grid_height }}
+      {{ search.start }}
+      -{{ search.end }} -
+      {{ search.move_type }} -
+      {{ search.path_length }} -
+      {{ search.visited_nodes }} -
+      {{ search.time_ns }}
 
     </li>
-  }
-</ul>
+    }
+  </ul>
+
+  <div class="pagination-controls">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Précédent</button>
+    <span>Page {{ currentPage}}</span>
+    <button (click)="nextPage()" [disabled]="currentPage * itemsPerPage >= searches.length">Suivant</button>
+  </div>
+</div>
+
