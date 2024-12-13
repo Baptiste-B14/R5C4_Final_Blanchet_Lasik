@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import {HomepageComponent} from "./homepage/homepage.component";
-import {GraphiquesComponent} from './graphiques/graphiques.component';
+import { ChartPageComponent} from "./chart-page/chart-page.component";
 import { VisuComponent} from "./visu/visu.component";
 
 export const routes: Routes = [
@@ -11,7 +11,7 @@ export const routes: Routes = [
 
   {
     path: 'graphiques',
-    component: GraphiquesComponent,
+    component: ChartPageComponent,
   },
   {
     path: 'visualisation',

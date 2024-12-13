@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import { Search} from "../models/Search";
 
+
 @Component({
   selector: 'app-visu',
   standalone: true,
